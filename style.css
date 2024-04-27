@@ -14,6 +14,213 @@ font-family: 'Rubik', sans-serif;
 font-weight: 700;
 */
 
-/* -------------------------------------------------- */
+
+body {margin: 0 auto;
+    font-family: "Open Sans", Sans-serif;
+    font-size: 15px;
+    line-height: 1.5;}
+
+.sekce-bila,
+.uvod {
+    margin-left: 1rem;
+    margin-right: 1rem;}
 
 
+h2 {font-family: "Rubik", sans-serif;
+font-weight: 700;}
+
+h1 {font-family: "Open-sans", sans-serif;}
+div p {text-align: justify;}
+
+/* ----------------------- MOBIL do 480px vč. --------------------------- */
+.hlavicka {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-basis: 90vw;
+    gap: 0;
+    /* min-width: 280px; */
+}
+
+.hlavicka-vlevo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    }
+
+.logo {
+    height: 2rem;
+    justify-self: center;
+}
+
+.hlavicka-vpravo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 1;
+    /* font-size: 0.7rem; */
+
+    }
+
+.menu li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    gap: 1rem;
+    flex-basis: 100%;
+    }
+
+.menu-tlacitka {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+}
+
+.tlacitko {
+    border: 1px solid black;
+    border-radius: 5px;
+    min-width: fit-content;
+    padding: 5px 10px;
+}
+
+.paticka-menu {
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 0;}
+
+.menu a,
+.menu-tlacitka a,
+.banner-text a,
+.paticka-menu a {
+    text-decoration: none;
+    padding: 5px 10px;}
+
+.tlacitko:focus {
+    background-color: #3498db;
+    color: white;}
+
+.menu {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;}
+
+.banner-foto img {
+    max-width: 90vw;
+    justify-content: center;
+    margin: 0 auto;
+    border: 1px dotted rgb(0, 255, 34);}
+
+.paticka {display: flex;
+    width: 100vw;
+    gap: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    background-color: #252525;
+    }
+
+.copyright {color: #959595;
+    font-size: 13px;}
+
+.paticka-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Rubik", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    gap: 20px;
+}
+.paticka-menu a {color: white;}
+
+
+
+
+/* ================ Tablet od 481px  ========================== */
+@media screen and (min-width: 481px) {
+.hlavicka {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-basis: 90vw;
+    gap: 0;}
+    
+.hlavicka-vlevo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;}
+    
+.logo {
+    display: flex;
+    height: 2rem;}
+
+.hlavicka-vpravo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end; 
+    /* flex-grow: 0.5; */
+    margin: 0;
+    font-size: 1rem;}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: nowrap; */
+    margin-right: 0;
+    padding-left: 0;}
+
+.menu li {
+    justify-content: flex-end;
+}
+
+.menu-tlacitka {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* gap: 5px; */
+    justify-content: center;
+    align-items: flex-end;
+  
+}
+}
+
+
+
+
+
+
+/* ================ Desktop od 769px  ========================== */
+@media screen and (min-width: 769px) {
+    
+.hlavicka-vpravo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end; 
+    align-items: center;
+    flex-grow: 0.5;
+    margin: 0;
+    }
+/* .menu li {
+    display: inline-flex;
+    } */
+
+.menu-tlacitka {
+    display: flex;
+    gap: 5px;
+    align-items: center;}
+
+.menu {margin-right: 2rem;
+    padding-left: 0;}
+}
