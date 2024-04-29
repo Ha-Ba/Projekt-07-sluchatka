@@ -16,22 +16,21 @@ font-weight: 700;
 
 
 body {
-    margin: 0 auto;
+    margin: 0;
     font-family: "Open Sans", Sans-serif;
     font-size: 15px;
     line-height: 1.5;
 }
 
-.sekce-bila,
-.header {
-    width: 80vw;
-    margin: 0 auto;
-}
-
 .uvod {
     background-color:rgb(220,220,220);
     margin: 0;
+    padding-bottom: 0;
 }
+
+.hlavicka,
+.banner-text,
+.sekce-bila {padding: 0 10px;}
 
 
 h2 {font-family: "Rubik", sans-serif;
@@ -43,8 +42,9 @@ p {text-align: justify;}
 /* ----------------------- MOBIL do 480px vč. --------------------------- */
 .hlavicka {
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     padding-top: 2vh;
     }
 
@@ -92,8 +92,7 @@ p {text-align: justify;}
     border: 1px solid black;
     border-radius: 5px;
     min-width: fit-content;
-    padding: 5px 10px;
-}
+    }
 
 .paticka-menu {
     display: flex;
@@ -115,13 +114,18 @@ p {text-align: justify;}
     padding-left: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;}
+    justify-content: center;
+}
+
+.banner-foto {
+    width: 100vw;
+    text-align: center;
+}
 
 .banner-foto img {
-    max-width: 90vw;
-    justify-content: center;
-    margin: 0 auto;
-    border: 1px dotted rgb(0, 255, 34);}
+    width: 100%;
+    border: 1px dotted rgb(0, 255, 34);
+}
 
 .paticka {
     display: flex;
@@ -152,13 +156,13 @@ p {text-align: justify;}
 
 
 
+
 /* ================ Tablet od 481px  ========================== */
 @media screen and (min-width: 481px) {
 .hlavicka {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 90vw;
     gap: 0;}
     
 .hlavicka-vlevo {
@@ -169,6 +173,7 @@ p {text-align: justify;}
     
 .logo {
     display: flex;
+    /* padding-left: 10px; */
     /* height: 2rem; */
 }
 
@@ -225,10 +230,10 @@ p {text-align: justify;}
 
 /* ================ Desktop od 769px  ========================== */
 @media screen and (min-width: 769px) {
-.uvod,
+/* .uvod,
 .sekce-bila {
     width: 80vw;
-    margin: 2vh auto;}
+    margin: 2vh auto;} */
 
 .hlavicka-vpravo {
     display: flex;
