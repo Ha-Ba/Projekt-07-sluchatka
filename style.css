@@ -15,68 +15,69 @@ font-weight: 700;
 */
 
 
-body {margin: 0 auto;
+body {margin: 0;
     font-family: "Open Sans", Sans-serif;
     font-size: 15px;
-    line-height: 1.5;}
+    line-height: 1.5;
+}
 
 .sekce-bila,
 .uvod {
-    margin-left: 1rem;
-    margin-right: 1rem;}
+    width: 80vw;
+    margin: 0 auto;
+}
 
 
 h2 {font-family: "Rubik", sans-serif;
 font-weight: 700;}
 
 h1 {font-family: "Open-sans", sans-serif;}
-div p {text-align: justify;}
+p {text-align: justify;}
 
 /* ----------------------- MOBIL do 480px vč. --------------------------- */
 .hlavicka {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: center;
-    flex-basis: 90vw;
-    gap: 0;
-    /* min-width: 280px; */
-}
+    margin-top: 2vh;
+    }
 
 .hlavicka-vlevo {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     }
 
 .logo {
     height: 2rem;
-    justify-self: center;
-}
+    }
 
 .hlavicka-vpravo {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
     flex-grow: 1;
-    /* font-size: 0.7rem; */
-
-    }
+}
 
 .menu li {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    list-style: none;
-    gap: 1rem;
+    flex-direction: row;
     flex-basis: 100%;
+    justify-content: center;
+    align-items: baseline;
+    list-style: none;
+    /* gap: 1rem; */
+    
     }
 
 .menu-tlacitka {
     display: flex;
     flex-direction: column;
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     gap: 1rem;
 }
@@ -116,14 +117,14 @@ div p {text-align: justify;}
     margin: 0 auto;
     border: 1px dotted rgb(0, 255, 34);}
 
-.paticka {display: flex;
+.paticka {
+    display: flex;
     width: 100vw;
     gap: 50px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    margin-top: 50px;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    padding: 50px 10vw;
     background-color: #252525;
     }
 
@@ -151,7 +152,7 @@ div p {text-align: justify;}
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    flex-basis: 90vw;
+    width: 90vw;
     gap: 0;}
     
 .hlavicka-vlevo {
@@ -162,26 +163,34 @@ div p {text-align: justify;}
     
 .logo {
     display: flex;
-    height: 2rem;}
+    /* height: 2rem; */
+}
 
 .hlavicka-vpravo {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: flex-end; 
+    align-items: flex-end;
     /* flex-grow: 0.5; */
     margin: 0;
     font-size: 1rem;}
 
 .menu {
     display: flex;
-    flex-direction: column;
-    /* flex-wrap: nowrap; */
+    flex-direction: row;
+    flex-wrap: nowrap;
     margin-right: 0;
     padding-left: 0;}
 
 .menu li {
-    justify-content: flex-end;
+    /* justify-content: space-around; */
+    align-items: center;
+    min-width: 20%;
+    padding-right: 0;
+    flex-shrink: 1;
+    padding-right: 5px;
+    
 }
 
 .menu-tlacitka {
@@ -193,6 +202,14 @@ div p {text-align: justify;}
     align-items: flex-end;
   
 }
+.paticka-menu {
+    flex-direction: row;
+    align-items: center;
+    }
+.paticka {
+    gap: 5px;
+    padding: 50px 10vw;
+}  
 }
 
 
@@ -202,7 +219,11 @@ div p {text-align: justify;}
 
 /* ================ Desktop od 769px  ========================== */
 @media screen and (min-width: 769px) {
-    
+.uvod,
+.sekce-bila {
+    width: 80vw;
+    margin: 2vh auto;}
+
 .hlavicka-vpravo {
     display: flex;
     flex-direction: row;
@@ -210,17 +231,28 @@ div p {text-align: justify;}
     justify-content: flex-end; 
     align-items: center;
     flex-grow: 0.5;
-    margin: 0;
-    }
-/* .menu li {
-    display: inline-flex;
-    } */
+    margin: 0;}
+
 
 .menu-tlacitka {
     display: flex;
     gap: 5px;
     align-items: center;}
 
-.menu {margin-right: 2rem;
+
+.menu {
     padding-left: 0;}
+
+.paticka-menu {
+    flex-direction: row;
+    align-items: center;
+    }
+.paticka {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 5px;
+    justify-content: space-between;
+    padding: 50px 10vw;
+}    
+
 }
