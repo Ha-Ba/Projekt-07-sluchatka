@@ -28,9 +28,20 @@ body {
     padding-bottom: 0;
 }
 
+.wrap {
+    border: 3px solid red;
+}
+
+.sekce-bila, 
+.sekce-cerna,
+.uvod {
+    padding: 50px 10vw;
+    border: 3px dotted blue;
+}
+
 .hlavicka,
-.banner-text,
-.sekce-bila {padding: 0 10px;}
+.paticka {border: 2px dashed green;}
+
 
 
 h2 {font-family: "Rubik", sans-serif;
@@ -39,19 +50,31 @@ font-weight: 700;}
 h1 {font-family: "Open-sans", sans-serif;}
 p {text-align: justify;}
 
+ul {padding-left: 0;}
+
+.banner {margin-top: 0;
+    
+border: 5px dashed white;}
+
+
+
 /* ----------------------- MOBIL do 480px vč. --------------------------- */
+
+
 .hlavicka {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 2vh;
+    /* padding-top: 2vh; */
     }
 
 .hlavicka-vlevo {
     display: flex;
+    flex-basis: 100%;
     justify-content: center;
     align-items: center;
+    border: 2px solid white;
     }
 
 .logo {
@@ -60,23 +83,24 @@ p {text-align: justify;}
 
 .hlavicka-vpravo {
     display: flex;
+    flex-basis: 100%;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-end;
-    flex-grow: 1;
+    border: 2px solid orange;
+    /* flex-grow: 1; */
 }
 
 .menu li {
     display: flex;
-    flex-direction: row;
     flex-basis: 100%;
+    flex-direction: row;
     justify-content: center;
-    align-items: baseline;
+    /* align-items: baseline; */
     list-style: none;
-    /* gap: 1rem; */
     
-    }
+}
 
 .menu-tlacitka {
     display: flex;
@@ -92,64 +116,89 @@ p {text-align: justify;}
     border: 1px solid black;
     border-radius: 5px;
     min-width: fit-content;
+    padding: 5px 10px;
     }
-
+/* =========================================================== */
 .paticka-menu {
     display: flex;
     justify-content: flex-end;
-    padding-left: 0;}
-
+    border: 2px solid yellow;
+    /* padding-left: 0; */
+}
+/* 
 .menu a,
 .menu-tlacitka a,
 .banner-text a,
+.paticka-menu a  */
+
+.tlacitko,
+.menu a,
 .paticka-menu a {
     text-decoration: none;
-    padding: 5px 10px;}
+    /* padding: 5px 10px; */
+}
 
 .tlacitko:focus {
     background-color: #3498db;
     color: white;}
 
 .menu {
-    padding-left: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .banner-foto {
-    width: 100vw;
+    flex-basis: 100vw;
     text-align: center;
 }
 
 .banner-foto img {
     width: 100%;
+    /* padding: 0;
+    margin: 0;
+    border: 0;     */
     border: 1px dotted rgb(0, 255, 34);
+
+}
+.sekce-cerna {
+    background-color: #252525;
 }
 
 .paticka {
     display: flex;
-    width: 100vw;
-    gap: 50px;
-    margin-top: 50px;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 10vw;
-    background-color: #252525;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    background-color: #252525; 
+    gap: 20px;
+    border: 3px dashed green;
     }
 
-.copyright {color: #959595;
-    font-size: 13px;}
-
-.paticka-menu {
-    list-style: none;
+.copyright {
     display: flex;
     flex-direction: column;
+    flex-basis: 100%;
+    color: #959595;
+    font-size: 13px;
+    border: 2px dotted lightcoral;    
+}
+
+.paticka-menu {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
+    list-style: none;
+    padding-left: 0;
+    gap: 20px;
+
     font-family: "Rubik", sans-serif;
     font-size: 13px;
     font-weight: bold;
-    gap: 20px;
+        
 }
 .paticka-menu a {color: white;}
 
@@ -157,61 +206,63 @@ p {text-align: justify;}
 
 
 
-/* ================ Tablet od 481px  ========================== */
+/* ================ Tablet od 481px do 768px včetně ========================== */
 @media screen and (min-width: 481px) {
 .hlavicka {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 0;}
-    
+    gap: 0;
+    /* padding: 0 10vw; */
+    }
+
 .hlavicka-vlevo {
     display: flex;
+    flex-basis: 20%;
     justify-content: flex-start;
     align-items: center;
-    flex-grow: 1;}
+    }
     
-.logo {
-    display: flex;
-    /* padding-left: 10px; */
-    /* height: 2rem; */
-}
 
 .hlavicka-vpravo {
     display: flex;
-    flex-direction: column;
+    flex-basis: 80%;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end; 
-    align-items: flex-end;
-    /* flex-grow: 0.5; */
-    margin: 0;
-    font-size: 1rem;}
+    font-size: 0.9rem;
+    }
 
 .menu {
     display: flex;
+    flex-basis: 100%;
     flex-direction: row;
+    text-align: left;
     flex-wrap: nowrap;
-    margin-right: 0;
-    padding-left: 0;}
+    border: 2px dashed lime;
+    }
 
 .menu li {
-    /* justify-content: space-around; */
-    align-items: center;
-    min-width: 20%;
-    padding-right: 0;
-    flex-shrink: 1;
-    padding-right: 5px;
-    
-}
+    flex-direction: row;
+    flex-basis: calc(100% / 4);
+    border: 2px dashed purple;
+    justify-content: flex-start;
+    padding-left: 2px;
+    }
 
 .menu-tlacitka {
     display: flex;
+    flex-basis: 100%;
     flex-direction: row;
     flex-wrap: nowrap;
     /* gap: 5px; */
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-end;
-  
+ }
+
+.banner-text {
+    padding-top: 50px;
+    border: 10px dotted pink;
 }
 .paticka-menu {
     flex-direction: row;
@@ -220,6 +271,7 @@ p {text-align: justify;}
 .paticka {
     gap: 5px;
     padding: 50px 10vw;
+    align-items: center;
 }  
 }
 
@@ -228,7 +280,8 @@ p {text-align: justify;}
 
 
 
-/* ================ Desktop od 769px  ========================== */
+
+/* ================ Desktop od 769px a více  ========================== */
 @media screen and (min-width: 769px) {
 /* .uvod,
 .sekce-bila {
