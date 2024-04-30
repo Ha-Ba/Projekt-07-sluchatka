@@ -99,6 +99,7 @@ border: 5px dashed white;}
     justify-content: center;
     /* align-items: baseline; */
     list-style: none;
+    min-width: fit-content;
     
 }
 
@@ -191,6 +192,7 @@ border: 5px dashed white;}
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     list-style: none;
     padding-left: 0;
     gap: 20px;
@@ -264,15 +266,32 @@ border: 5px dashed white;}
     padding-top: 50px;
     border: 10px dotted pink;
 }
-.paticka-menu {
-    flex-direction: row;
-    align-items: center;
-    }
+/* ======================patička tablet ============= */
 .paticka {
-    gap: 5px;
-    padding: 50px 10vw;
+    display: flex;
+    flex-basis: 100%;
+    gap: 0px;
     align-items: center;
+    justify-content: space-between;
+    border: 2px solid white;
 }  
+.paticka-menu {
+    flex-basis: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    }
+
+
+.copyright {
+    flex-basis: 100%;
+}
+.paticka-menu li {
+    flex-basis: calc(100% / 5);
+}
+
 }
 
 
@@ -283,20 +302,27 @@ border: 5px dashed white;}
 
 /* ================ Desktop od 769px a více  ========================== */
 @media screen and (min-width: 769px) {
-/* .uvod,
-.sekce-bila {
-    width: 80vw;
-    margin: 2vh auto;} */
+
 
 .hlavicka-vpravo {
     display: flex;
     flex-direction: row;
+    flex-basis: 100%;
     flex-wrap: nowrap;
     justify-content: flex-end; 
     align-items: center;
     flex-grow: 0.5;
-    margin: 0;}
-
+    margin: 0;
+    gap: 0;
+}
+.logo {height: 1.5rem;}    
+       
+        
+        /* flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-end;
+        border: 2px solid orange; */
 
 .menu-tlacitka {
     display: flex;
@@ -305,18 +331,39 @@ border: 5px dashed white;}
 
 
 .menu {
+    display: flex;
     padding-left: 0;}
+/* ======== patička desktop ============== */
+.paticka {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-basis: 100%;
+    gap: 15%;
+    
+    }
 
 .paticka-menu {
     flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
+    flex-basis: 60%;
     }
-.paticka {
+
+.copyright {
     flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 5px;
-    justify-content: space-between;
-    padding: 50px 10vw;
-}    
+    flex-basis: 25%;
+    align-items: center;
+    justify-content: flex-start;
+    }  
+
+.paticka-menu li {
+    border: 3px solid blue;
+    padding-left: 0;
+    text-align: left;
+    flex-basis: calc(100% / 5);
+    justify-content: flex-end;
+}
+  
 
 }
