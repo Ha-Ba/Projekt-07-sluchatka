@@ -42,8 +42,6 @@ body {
 .hlavicka,
 .paticka {border: 2px dashed green;}
 
-
-
 h2 {font-family: "Rubik", sans-serif;
 font-weight: 700;}
 
@@ -52,21 +50,16 @@ p {text-align: justify;}
 
 ul {padding-left: 0;}
 
-.banner {margin-top: 0;
-    
-border: 5px dashed white;}
-
-
+.banner {
+    margin-top: 0;
+    border: 5px dashed white;}
 
 /* ----------------------- MOBIL do 480px vč. --------------------------- */
-
-
 .hlavicka {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    /* padding-top: 2vh; */
     }
 
 .hlavicka-vlevo {
@@ -100,6 +93,8 @@ border: 5px dashed white;}
     /* align-items: baseline; */
     list-style: none;
     min-width: fit-content;
+    padding-top: 10px;
+    padding-bottom: 10px;
     
 }
 
@@ -117,13 +112,14 @@ border: 5px dashed white;}
     border: 1px solid black;
     border-radius: 5px;
     min-width: fit-content;
-    padding: 5px 10px;
+    padding: 10px 10px;
     }
 /* =========================================================== */
 .paticka-menu {
     display: flex;
     justify-content: flex-end;
     border: 2px solid yellow;
+    margin-bottom: 0;
     /* padding-left: 0; */
 }
 /* 
@@ -156,10 +152,7 @@ border: 5px dashed white;}
 
 .banner-foto img {
     width: 100%;
-    /* padding: 0;
-    margin: 0;
-    border: 0;     */
-    border: 1px dotted rgb(0, 255, 34);
+    border: 3px dotted rgb(0, 255, 34);
 
 }
 .sekce-cerna {
@@ -204,31 +197,27 @@ border: 5px dashed white;}
 }
 .paticka-menu a {color: white;}
 
-
-
-
-
 /* ================ Tablet od 481px do 768px včetně ========================== */
 @media screen and (min-width: 481px) {
 .hlavicka {
     display: flex;
+    flex-basis: 100%;
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 0;
-    /* padding: 0 10vw; */
     }
 
 .hlavicka-vlevo {
-    display: flex;
-    flex-basis: 20%;
+    /* display: flex; */
+    /* flex-basis: 20%; */
     justify-content: flex-start;
     align-items: center;
     }
     
 
 .hlavicka-vpravo {
-    display: flex;
-    flex-basis: 80%;
+    /* display: flex; */
+    /* flex-basis: 80%; */
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end; 
@@ -236,8 +225,8 @@ border: 5px dashed white;}
     }
 
 .menu {
-    display: flex;
-    flex-basis: 100%;
+    /* display: flex; */
+    /* flex-basis: 100%; */
     flex-direction: row;
     text-align: left;
     flex-wrap: nowrap;
@@ -254,8 +243,8 @@ border: 5px dashed white;}
     }
 
 .menu-tlacitka {
-    display: flex;
-    flex-basis: 100%;
+    /* display: flex; */
+    /* flex-basis: 100%; */
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-end;
@@ -266,15 +255,14 @@ border: 5px dashed white;}
     padding-top: 50px;
     border: 10px dotted pink;
 }
-/* ======================patička tablet ============= */
+/* ======================patička tablet do 769px ============= */
 .paticka {
     display: flex;
     flex-basis: 100%;
-    gap: 0px;
     align-items: center;
-    justify-content: space-between;
-    
+    gap: 0;    
 }  
+
 .paticka-menu {
     flex-basis: 100%;
     flex-direction: row;
@@ -287,9 +275,13 @@ border: 5px dashed white;}
 
 .copyright {
     flex-basis: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .paticka-menu li {
     flex-basis: calc(100% / 5);
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 }
