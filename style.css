@@ -190,26 +190,27 @@ ul {padding-left: 0;}
 @media screen and (min-width: 481px) {
 .hlavicka {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     flex-wrap: nowrap;
+    flex-basis: 100%;
     justify-content: space-between;
+    align-items: center;
     gap: 0;
     }
 
 .hlavicka-vlevo {
     display: flex;
-    /* flex-basis: 20%; */
     justify-content: flex-start;
-    align-items: center;
+    align-items: baseline;
     }
     
 
 .hlavicka-vpravo {
     display: flex;
-    /* flex-basis: 80%; */
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: flex-end; 
+    align-items: baseline;
     font-size: 0.9rem;
     }
 
@@ -277,10 +278,12 @@ ul {padding-left: 0;}
 /* ================ Desktop od 769px a více  ========================== */
 @media screen and (min-width: 769px) {
 
+/* === Hlavička Desktop od 769px a více  == */
 .hlavicka,
 .paticka {border: 5px dashed green;
-justify-content: space-between;}
-
+justify-content: space-between;
+flex-basis: 100%;
+}
 
 .hlavicka-vlevo {border: 3px solid white;}
 
@@ -288,40 +291,39 @@ justify-content: space-between;}
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
     gap: 1rem;
-    max-width: max-content;
+    
 }
 
-/* .logo {height: 1.5rem;}     */
+.logo {height: 1.5rem;
+flex-shrink: 1.5;}    
         
 .menu-tlacitka {
-    display: flex;
-    /* flex-basis: 50%; */
+    /* display: flex; */
     align-items: center;
-    justify-content: flex-end;
+    flex-grow: 1;
     border: 2px dotted green;
     }
 
-.menu li {
-    padding: 5px 10px 5px 0;
+    .menu {
+        /* display: flex;
+        align-items: center;
+        justify-content: flex-end; */
+        flex-grow: 3;
+        flex-direction: row;
+        border: 3px dotted rgb(36, 206, 248);
+    
+    }
+    .menu li {
+    padding: 5px 10px;
     border: 2px dashed purple;
-    align-items: flex-end; 
+    /* align-items: center; */
+    /* justify-content: flex-end;  */
     }
 
-.menu {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    /* display: flex; */
-    flex-basis: 100%;
-    flex-direction: row;
-    /* align-items: center; */
-    border: 3px dotted rgb(36, 206, 248);
-    margin: 0;
-    flex-grow: 10;
-  
-}
+
+
 /* ======== patička desktop ============== */
 .paticka {
     display: flex;
