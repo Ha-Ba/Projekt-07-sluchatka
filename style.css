@@ -68,7 +68,7 @@ ul {padding-left: 0;}
     }
 
 .logo {
-    height: 2rem;
+    height: 3rem;
     }
 
 .hlavicka-vpravo {
@@ -108,8 +108,7 @@ ul {padding-left: 0;}
 .paticka-menu {
     display: flex;
     justify-content: flex-end;
-    /* border: 2px solid yellow; */
-}
+    }
 
 .tlacitko,
 .menu a,
@@ -131,7 +130,7 @@ ul {padding-left: 0;}
 .banner-foto {
     flex-basis: 100vw;
     text-align: center;
-    /* display: flex; */
+    
 }
 
 .banner-foto img {
@@ -150,8 +149,6 @@ ul {padding-left: 0;}
     justify-content: center;
     text-align: center;
     background-color: #252525; 
-    /* gap: 20px; */
-    /* gap: 2rem; */
     border: 3px dashed green;
     }
 
@@ -161,6 +158,7 @@ ul {padding-left: 0;}
     flex-basis: 100%;
     color: #959595;
     font-size: 13px;
+    padding: 5px 10px;
     border: 2px dotted lightcoral;    
 }
 
@@ -187,46 +185,49 @@ ul {padding-left: 0;}
 
 
 /* ================ Tablet od 481px do 768px včetně ========================== */
+
 @media screen and (min-width: 481px) {
 .hlavicka {
     display: flex;
-    /* flex-direction: row; */
+    flex-direction: row;
     flex-wrap: nowrap;
-    flex-basis: 100%;
     justify-content: space-between;
     align-items: center;
     gap: 0;
     }
 
 .hlavicka-vlevo {
-    display: flex;
-    justify-content: flex-start;
     align-items: baseline;
+    flex-basis: auto;
     }
-    
+.logo {
+    height: 1.5rem;
+    } 
 
 .hlavicka-vpravo {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: flex-end; 
-    align-items: baseline;
-    font-size: 0.9rem;
-    }
+    
+    align-items: flex-end;
+    gap: 0.5rem 1rem;
+    font-size: 0.8rem;}
 
 .menu {
     display: flex;
-    flex-basis: 100%;
+    /* flex-basis: 100%; */
     flex-direction: row;
-    text-align: left;
+    text-align: center;
     flex-wrap: nowrap;
+    justify-content: flex-end;
+    margin: 0;
     }
 
 .menu li {
-    flex-direction: row;
-    justify-content: flex-start;
-    padding-left: 2px;
-    padding-right: 10px;
+    padding: 5px;
+    flex-basis: content;
+    flex-shrink: 2;
+    
     border: 2px dashed purple;
     }
 
@@ -244,30 +245,17 @@ ul {padding-left: 0;}
     border: 10px dotted pink;
 }
 /* ======================patička tablet ============= */
-.paticka {
-    display: flex;
-    flex-basis: 100%;
-    gap: 0px;
-    align-items: center;
-    justify-content: space-between;
-    
-}  
+
 .paticka-menu {
-    flex-basis: 100%;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
     margin: 0 auto;
+    gap: 0.5rem;
     }
 
-
-.copyright {
-    flex-basis: 100%;
-}
 .paticka-menu li {
-    flex-basis: calc(100% / 5);
-}
+    padding: 5px 10px;
+    } 
 
 }
 
@@ -280,12 +268,59 @@ ul {padding-left: 0;}
 
 /* === Hlavička Desktop od 769px a více  == */
 .hlavicka,
-.paticka {border: 5px dashed green;
-justify-content: space-between;
-flex-basis: 100%;
+.paticka {
+    border: 5px dashed green;
+    justify-content: space-between;
 }
 
-.hlavicka-vlevo {border: 3px solid white;}
+.hlavicka {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    }
+
+.hlavicka-vlevo {
+    justify-content: flex-start;
+    align-items: baseline;
+    }
+    
+
+.hlavicka-vpravo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end; 
+    align-items: center;
+    font-size: 0.9rem;
+    gap: 1rem;
+    }
+
+.menu {
+    flex-direction: row;
+    text-align: left;
+    flex-wrap: nowrap;
+    }
+
+.menu li {
+    border: 2px dashed purple;
+    }
+
+.menu-tlacitka {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-basis:unset;}
+
+.banner-text {
+    padding-top: 50px;
+    border: 10px dotted pink;
+}
+/* =========původní je dole =========== */
+
+/* .hlavicka-vlevo {border: 3px solid white;}
 
 .hlavicka-vpravo {
     display: flex;
@@ -300,16 +335,12 @@ flex-basis: 100%;
 flex-shrink: 1.5;}    
         
 .menu-tlacitka {
-    /* display: flex; */
     align-items: center;
     flex-grow: 1;
     border: 2px dotted green;
     }
 
     .menu {
-        /* display: flex;
-        align-items: center;
-        justify-content: flex-end; */
         flex-grow: 3;
         flex-direction: row;
         border: 3px dotted rgb(36, 206, 248);
@@ -318,43 +349,51 @@ flex-shrink: 1.5;}
     .menu li {
     padding: 5px 10px;
     border: 2px dashed purple;
-    /* align-items: center; */
-    /* justify-content: flex-end;  */
-    }
+    } */
 
 
 
 /* ======== patička desktop ============== */
 .paticka {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    flex-basis: 100%;
-    gap: 15%;
     border: 2px solid white;
-    
+    margin: 0;
     }
 
 .paticka-menu {
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    flex-basis: 60%;
+    border: 2px dashed darkgoldenrod;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
     }
 
 .copyright {
-    flex-direction: row;
-    flex-basis: 25%;
+    /* flex-direction: row; */
     align-items: center;
-    justify-content: flex-start;
+    flex-wrap: nowrap;
+    flex-basis: auto; 
+    padding: 5px 10px;
+    margin: 0;
     }  
 
 .paticka-menu li {
     border: 3px solid blue;
-    padding-left: 0;
+    padding: 5px 10px;
     text-align: left;
-    flex-basis: calc(100% / 5);
-    justify-content: flex-end;
+    margin: 0;
+}
+
+.hlavicka-vlevo {
+    margin: 0;
+    padding: 0;
 }
   
 
