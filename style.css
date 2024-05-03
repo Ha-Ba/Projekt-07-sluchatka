@@ -15,7 +15,7 @@ font-weight: 700;
 */
 
 body {
-    margin: 0;
+    margin: 0 auto;
     font-family: "Open Sans", Sans-serif;
     font-size: 13px;
     line-height: 1.5;
@@ -33,9 +33,8 @@ body {
 }
 
 .sekce-bila, 
-.sekce-cerna,
-.uvod {
-    padding: 50px 10vw;
+.sekce-cerna {
+    padding: 50px 5vw;
     border: 3px dotted blue;
 }
 
@@ -46,6 +45,7 @@ h1 {font-family: "Open-sans", sans-serif;
 font-size: 44px;
 font-weight: 300;
 line-height: 1.2;
+padding-top: auto;
 }
 
 p {text-align: justify;}
@@ -53,16 +53,18 @@ p {text-align: justify;}
 ul {padding-left: 0;}
 
 .banner {
-    margin-top: 0;    
-    border: 2px dashed white;}
-.minitext {margin-top: 1rem;
+    margin-bottom: 0;    
+    border: 2px dashed white;
 }
+.banner-text {margin: 0 5vw;}
+
+.minitext {margin-top: 1rem;}
+
 .vlastnost img { 
     width: 50px; 
     height: 50px;
-    /* margin-bottom: 30px;
-    margin-right: 30px; */
-margin: 30px;
+    margin: 30px;
+
 }
 
 .vlastnosti {
@@ -74,7 +76,8 @@ margin: 30px;
 }
 
 .vlastnost {
-    border: 1px solid gray;
+    box-shadow: 1px 1px 3px rgba(128, 128, 128, 0.178);
+    /* border: 1px solid rgba(128, 128, 128, 0.178); */
     border-radius: 1rem;
     /* margin: 30px; */
     padding: 30px; 
@@ -163,11 +166,13 @@ margin: 30px;
 .banner-foto {
     flex-basis: 100vw;
     text-align: center;
+    /* padding-bottom: 0; */
 }
 
 .banner-foto img {
     width: 100%;
     border: 1px dotted rgb(0, 255, 34);
+    /* padding-bottom: 0; */
 }
 
 .sekce-cerna {
@@ -270,6 +275,7 @@ margin: 30px;
     padding-top: 50px;
     border: 10px dotted pink;
 }
+.hlavicka-vpravo {padding-bottom: 0;}
 /* ======================patička tablet ============= */
 
 .paticka-menu {
@@ -345,10 +351,13 @@ margin: 30px;
     align-items: center;
     flex-basis:unset;}
 
-.banner-text {
-    padding-top: 50px;
+.banner-text {margin: 0;}
+
+    .banner-text {
     border: 10px dotted pink;
 }
+
+.banner-foto {width: 20%;}
 /* =========původní je dole =========== */
 
 /* .hlavicka-vlevo {border: 3px solid white;}
@@ -454,7 +463,20 @@ flex-basis: auto;}
     top: 30px;
     padding: 0;    
 } */
+/* ========== Banner pozicování ======= */
+/* .banner {display: flex;} */
+.banner {display: flex;
+    margin: 0 5vw;}
+.banner-foto {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    overflow: visible;
+    }
 
-
-
+.banner-text {
+    position: relative;
+    z-index: 2;
+    overflow: visible;
+}
 }
