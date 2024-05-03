@@ -6,7 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Sluchátka</title>
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Rubik:400,700&amp;subset=latin-ext" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"/>
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
 
@@ -70,28 +72,41 @@
 
 				<div class="vlastnosti">
 
-					<div class="vlastnost ikona-kufrik">
-						<h2>Kompaktní a dobře přenosné</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, officia vel! Cupiditate commodi quasi, accusantium sed eveniet suscipit ut placeat.</p>
-						<a href="#">Zjistit podrobnosti</a>
+					<div class="vlastnost ikona-kufrik card">
+						<img  class="card-img-left" src="images/kufrik.svg" alt="Kufřík">
+						<div class="card-body">
+						
+							<h2 class="card-title">Kompaktní a dobře přenosné</h2>
+							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, officia vel! Cupiditate commodi quasi, accusantium sed eveniet suscipit ut placeat.</p>
+							<a href="#" class="btn-link">Zjistit podrobnosti</a>
+						</div>
 					</div>
 
-					<div class="vlastnost ikona-slunce">
-						<h2>Fungují za každého počasí</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, officia vel! Cupiditate commodi quasi, accusantium sed eveniet suscipit ut placeat.</p>
-						<a href="#">Zjistit podrobnosti</a>
+					<div class="vlastnost ikona-slunce card">
+						<img src="images/slunce.svg" alt="Slunce" class="card-img-left">
+						<div class="card-body">
+							<h2 class="card-title">Fungují za každého počasí</h2>
+							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, officia vel! Cupiditate commodi quasi, accusantium sed eveniet suscipit ut placeat.</p>
+							<a class="btn-link" href="#">Zjistit podrobnosti</a>
+						</div>
 					</div>
 
-					<div class="vlastnost ikona-srdce">
-						<h2>V barvách, které si zamilujete</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, officia vel! Cupiditate commodi quasi, accusantium sed eveniet suscipit ut placeat.</p>
-						<a href="#">Zjistit podrobnosti</a>
+					<div class="vlastnost ikona-srdce card">
+						<img src="images/srdce.svg" alt="Srdce" class="card-img-left"> 
+						<div class="card-body">
+							<h2 class="card-title">V barvách, které si zamilujete</h2>
+							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, officia vel! Cupiditate commodi quasi, accusantium sed eveniet suscipit ut placeat.</p>
+							<a class="card-link" href="#">Zjistit podrobnosti</a>
+						</div>
 					</div>
 
-					<div class="vlastnost ikona-zvuk">
-						<h2>Výborný zvuk</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, officia vel! Cupiditate commodi quasi, accusantium sed eveniet suscipit ut placeat.</p>
-						<a href="#">Zjistit podrobnosti</a>
+					<div class="vlastnost ikona-zvuk card">
+						<img src="images/zvuk.svg" alt="zvuk-reproduktor" class="card-img-left">
+						<div class="card-body">
+							<h2 class="card-title">Výborný zvuk</h2>
+							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, officia vel! Cupiditate commodi quasi, accusantium sed eveniet suscipit ut placeat.</p>
+							<a class="card-link" href="#">Zjistit podrobnosti</a>
+						</div>
 					</div>
 
 
@@ -126,5 +141,7 @@
 		</div><!-- konec .sekce -->
 
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 	</body>
 </html>
