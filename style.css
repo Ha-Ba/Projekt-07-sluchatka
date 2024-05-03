@@ -18,8 +18,7 @@ body {
     margin: 0 auto;
     font-family: "Open Sans", Sans-serif;
     font-size: 15px;
-    line-height: 1.5;
-}
+    line-height: 1.5;}
 
 .hlavicka,
 .paticka, a {font-size: 13px;}
@@ -39,9 +38,10 @@ body {
     margin: auto auto;}
 
 .sekce-bila, 
-.sekce-cerna {
-    padding: 50px 5vw;}
+.sekce-cerna {padding: 50px 5vw;}
+
 .wrap {padding-bottom: 0;}
+
 h2 {
     font-family: "Rubik", sans-serif;
     font-weight: 700;}
@@ -50,13 +50,23 @@ h1 {
     font-family: "Open-sans", sans-serif;
     font-size: 44px;
     font-weight: 300;
-    line-height: 1.2;}
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;}
+
+.banner-text {
+    display: flex;
+    flex-direction: column;}
 
 .tlacitko-velke {
     font-size: 16px;
-    font-weight: 600;}
+    font-weight: 600;
+    align-self: center;}
 
 p {text-align: justify;}
+
+.minitext {text-align: center;}
 
 ul {padding-left: 0;}
 
@@ -94,12 +104,12 @@ ul {padding-left: 0;}
 .hlavicka-vlevo {
     display: flex;
     justify-content: center;
-    align-items: center;
-    }
+    align-items: center;}
 
 .logo {
     height: 2rem;
-    }
+    margin-top: 1rem;
+    margin-bottom: 1rem;}
 
 .hlavicka-vpravo {
     display: flex;
@@ -108,8 +118,7 @@ ul {padding-left: 0;}
     flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-end;
-    padding-bottom: 5px;
-}
+    padding-bottom: 5px;}
 
 .menu li {
     display: flex;
@@ -117,8 +126,7 @@ ul {padding-left: 0;}
     flex-direction: row;
     justify-content: center;
     list-style: none;
-    padding: 5px 10px;
-}
+    padding: 5px 10px;}
 
 .menu-tlacitka {
     display: flex;
@@ -127,20 +135,22 @@ ul {padding-left: 0;}
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 0.5rem 0.5rem;
-}
+    gap: 0.5rem 0.5rem;}
 
 .tlacitko {
     border: 1px solid #959595;
     border-radius: 5px;
     padding: 5px 10px;
-    font-weight: 600;
-    }
+    font-weight: 600;}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;}
 /* =========================================================== */
 .paticka-menu {
     display: flex;
     justify-content: flex-end;
-    }
+margin-top: 1rem;}
 
 .tlacitko,
 .menu a,
@@ -153,14 +163,14 @@ ul {padding-left: 0;}
 
 .tlacitko:hover,
 .tlacitko:hover {
-        background-color: rgb(241, 148, 210);
-        color: #3a3939;
+        background-color:  #3498db;
         font-weight: 600;}
 
 .tlacitko:active {
-    background-color: rgb(241, 148, 210);
-    color: #3a3939;
-    font-weight: 600;}
+    background-color: #3498db;
+    font-weight: 600;
+    color: black;
+    border: 1px dashed #131212;}
 
 .menu {
     display: flex;
@@ -168,20 +178,13 @@ ul {padding-left: 0;}
     justify-content: center;
 }
 
-.banner-foto {
-    /* text-align: center; */
-    flex-direction: flex-end;
-}
-
 .banner-foto img {
     width: 100%;
     border: 3px dotted rgb(0, 255, 34);
-    z-index: 0;
-}
+    z-index: 0;}
 
 .sekce-cerna {
-    background-color: #252525;
-}
+    background-color: #252525;}
 
 .paticka {
     display: flex;
@@ -237,6 +240,7 @@ ul {padding-left: 0;}
 
 .hlavicka-vlevo {
     align-items: baseline;
+    justify-content: flex-start;
     flex-basis: auto;
     }
 
@@ -244,10 +248,12 @@ ul {padding-left: 0;}
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
-    align-items: flex-end;
+    justify-content: flex-end;
+    align-items: baseline;
     gap: 0.5rem 1rem;
-    font-size: 0.8rem;}
+    font-size: 0.8rem;
+    padding-bottom: 0;
+    }
 
 .menu {
     display: flex;
@@ -270,14 +276,23 @@ ul {padding-left: 0;}
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-end;
-    align-items: flex-end;
- }
- /* ================ */
-.banner-text {padding-top: 0px;}
+    align-items: flex-end;}
 
-.hlavicka-vpravo {padding-bottom: 0;}
-/* ======================patička tablet ============= */
+h1 {
+    font-size: 44px;
+    font-weight: 300;}
+/* ================= Banner pozicování pro Tablet ================ */
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;}
 
+.banner-text {
+    padding-top: 0px;
+    margin: 0;
+    padding: 0 5vw;}
+
+/* ====================== Patička pro tablet ======================= */
 .paticka-menu {
     flex-direction: row;
     flex-wrap: nowrap;
@@ -288,8 +303,8 @@ ul {padding-left: 0;}
 .paticka-menu li {
     padding: 5px 10px;
     } 
-
 }
+
 
 /* ================ Desktop od 769px a více  ========================== */
 
@@ -317,7 +332,6 @@ ul {padding-left: 0;}
     justify-content: flex-start;
     flex-basis: auto;
     }
-    
 
 .hlavicka-vpravo {
     display: flex;
@@ -343,7 +357,7 @@ ul {padding-left: 0;}
     align-items: center;
     flex-basis:unset;}
 
-.banner-text {margin: 0;}
+.banner-text {margin: 0 auto;}
 
 /* ======== patička desktop ============== */
 .paticka {
@@ -352,16 +366,18 @@ ul {padding-left: 0;}
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    /* border: 2px solid white; */
-    margin: 0;
-    }
+    margin: 0 5vw;}
+
+.wrap .paticka {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 0.5rem;}
 
 .paticka-menu {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    /* border: 2px dashed darkgoldenrod; */
     gap: 0.5rem;
     margin: 0;
     padding: 0;
@@ -408,29 +424,33 @@ flex-basis: auto;}
 .card-body {
     display: flex;
     flex-wrap: wrap;}
-
-/* .card-img-left {
-    position: relative;
-    left: 30px;
-    top: 30px;
-    padding: 0;    
-} */
-/* ========== Banner pozicování ======= */
-/* .banner {display: flex;} */
-.banner {display: flex;
+/* ============== Baner pozicování na Desktopu ============ */
+.banner {
+    display: flex;
+    flex-direction: row;
     margin: 0 5vw;}
+
 .banner-foto {
-    /* position: relative; */
-    width: 100%;
-    bottom: 0;
-    overflow: visible;
-    /* justify-content: flex-end;
-    align-items: flex-end; */
-    }
+    align-self: flex-end;}
 
 .banner-text {
+    align-items: flex-start;
+    text-align: left;}
+
+h1 {text-align: left;}
+
+.tlacitko-velke {align-self: flex-start;}
+
+.banner-foto img {
     position: relative;
-    z-index: 2;
-    overflow: visible;
+    width: 130%;
+    height: auto;
+    float: right;
+    bottom: 0;
+    left: 0;
+    overflow-inline: visible;
+    }
 }
-}
+
+
+/* Desktop od 769px a více */
