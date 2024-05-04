@@ -59,7 +59,7 @@ body {
         font-weight: 600;}
 
 .tlacitko:active {
-    background-color: green;
+    background-color: rgb(243, 21, 213);
     font-weight: 600;
     color: black;
     border: 1px dashed #131212;}
