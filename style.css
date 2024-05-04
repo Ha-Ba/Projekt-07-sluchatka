@@ -20,31 +20,65 @@ body {
     font-size: 15px;
     line-height: 1.5;}
 
+.wrap {
+    padding-bottom: 0;
+    max-width: 1140px;
+    margin: 0 auto;}
+
 .hlavicka,
 .paticka, a {font-size: 13px;}
 
-.menu a, 
-.tlacitko-velke {color: #959595;}
+.menu a {color: #959595;}
 
-.menu-tlacitka a {color: white;}
+.tlacitko {
+    border: 1px solid #959595;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: 600;}
+
+.tlacitko-primarni,
+.tlacitko-velke {
+    color: white;
+    background-color: #3498db;}
+
+.tlacitko-sekundarni {color: black;}
+
+.tlacitko-velke {
+    font-size: 16px;
+    font-weight: 600;
+    align-self: center;}
+/* =============== Tlačítka + hover + active (začátek)================= */
+/* Toto níže určuje, které odkazy nejsou podtržené a modrou barvou pro odkazy  */
+.tlacitko,
+.menu a,
+.paticka-menu a {
+    text-decoration: none;}
+
+.tlacitko:hover {
+        background-color: #2866c2;
+        font-weight: 600;}
+
+.tlacitko:active {
+    background-color: green;
+    font-weight: 600;
+    color: black;
+    border: 1px dashed #131212;}
+/* =============== Tlačítka + hover + active (konec) ================= */
 .uvod {
     background-color:rgb(220,220,220);
-    margin: 0;
     padding-bottom: 0;}
 
 .uvod,
 .sekce-bila {
-    max-width: 1140px;
     margin: auto auto;}
 
 .sekce-bila, 
-.sekce-cerna {padding: 50px 5vw;}
-
-.wrap {padding-bottom: 0;}
+.sekce-cerna {padding: 50px 0;}
 
 h2 {
     font-family: "Rubik", sans-serif;
-    font-weight: 700;}
+    font-weight: 700;
+    font-size: 15px;}
 
 h1 {
     font-family: "Open-sans", sans-serif;
@@ -55,16 +89,13 @@ h1 {
     padding-top: 1rem;
     padding-bottom: 1rem;}
 
+.baner {min-height: 600px;}
+
 .banner-text {
     display: flex;
     flex-direction: column;
     margin: 0 5vw;
     max-width: 480px;}
-
-.tlacitko-velke {
-    font-size: 16px;
-    font-weight: 600;
-    align-self: center;}
 
 p {text-align: justify;}
 
@@ -79,7 +110,8 @@ ul {padding-left: 0;}
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 30px;
-    column-gap: 30px;}
+    column-gap: 30px;
+    margin: 0 5vw;}
 
 .vlastnost {
     box-shadow: 1px 1px 3px rgba(128, 128, 128, 0.178);
@@ -89,7 +121,7 @@ ul {padding-left: 0;}
 .vlastnost img { 
     width: 50px; 
     height: 50px;
-    margin: 30px;}
+    margin-right: 30px;}
 
 /* ----------------------- MOBIL do 480px vč. --------------------------- */
 
@@ -118,7 +150,6 @@ ul {padding-left: 0;}
     justify-content: flex-end;
     padding-bottom: 5px;}
 
-    
 .menu {
     display: flex;
     flex-wrap: wrap;
@@ -141,42 +172,14 @@ ul {padding-left: 0;}
     text-align: center;
     gap: 0.5rem 0.5rem;}
 
-.tlacitko {
-    border: 1px solid #959595;
-    border-radius: 5px;
-    padding: 5px 10px;
-    font-weight: 600;}
-
 /* =========================================================== */
 .paticka-menu {
     display: flex;
     justify-content: flex-end;
     margin-top: 1rem;}
 
-.tlacitko,
-.menu a,
-.paticka-menu a {
-    text-decoration: none;}
-
-.tlacitko,
-.tlacitko-velke {
-    background-color: #3498db;
-    color: white;}
-
-.tlacitko:hover,
-.tlacitko:hover {
-        background-color:  #3498db;
-        font-weight: 600;}
-
-.tlacitko:active {
-    background-color: #3498db;
-    font-weight: 600;
-    color: black;
-    border: 1px dashed #131212;}
-
 .banner-foto img {
-    width: 100%;
-    border: 3px dotted rgb(0, 255, 34);}
+    width: 100%;}
 
 .sekce-cerna {
     background-color: #252525;}
@@ -337,13 +340,10 @@ h1 {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    flex-wrap: nowrap;
-    margin: 0 5vw;}
+    flex-wrap: nowrap;}
 
-.wrap .paticka {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 0.5rem;}
+.wrap {
+    max-width: 1140px;}
 
 .paticka-menu {
     display: flex;
@@ -407,12 +407,12 @@ h1 {text-align: left;}
 .tlacitko-velke {align-self: flex-start;}
 
 .banner-foto img {
-    position: relative;
+    /* position: relative; */
     width: 130%;
     height: auto;
     float: right;
-    bottom: 0;
-    left: 0;
+    /* bottom: 0;
+    left: 0; */
     overflow-inline: visible;}
 }
 /* ==================== Konec desktop =================== */
